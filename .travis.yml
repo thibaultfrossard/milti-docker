@@ -16,7 +16,7 @@ after_sucess:
  - docker build -t thibaultfrossard/multi-worker ./worker
 
 #Log in to the Docker CI
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" -- password-stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  - docker push thibaultfrossard/multi-client
  - docker push thibaultfrossard/multi-nginx
  - docker push thibaultfrossard/multi-server
